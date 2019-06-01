@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.goodslist.GoodsListInfoActivity">
+    <LinearLayout
+        android:id="@+id/home_layout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#FFFCF6"
+            app:layout_scrollFlags="scroll|snap"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/goods_top_right_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/top_bar_right_home_btn"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+            <ImageView
+                android:id="@+id/goods_top_left_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/top_bar_left_back"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:background="#B3B3B3"
+                android:drawableLeft="@drawable/home_search_icon"
+                android:layout_height="wrap_content"
+                android:hint="请输入搜索内容"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="10dp"
+               app:layout_constraintLeft_toRightOf="@id/goods_top_left_back"
+                app:layout_constraintRight_toLeftOf="@+id/goods_top_right_img"
+                />
+            <View
+                android:layout_width="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="1dp"
+                android:background="#B3B3B3"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="40dp">
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="2">
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:button="@null"
+                    android:text="综合排序"
+                    android:gravity="center"
+                    android:textSize="19sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:text="价格"
+                    android:textSize="19sp"
+                    android:drawableRight="@drawable/item_goods_price"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+            </RadioGroup>
+
+
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+
+                android:gravity="center"
+                android:text="筛选"
+                android:textSize="19sp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/goods_list_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/main_gray"
+        app:layout_constraintTop_toBottomOf="@id/home_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        ></android.support.v7.widget.RecyclerView>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

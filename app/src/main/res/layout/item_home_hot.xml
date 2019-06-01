@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:background="#EEEEEE"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/home_arrow_left_hot"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#000"
+            android:text="这里都是买的棒棒哒"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/tv_more_hot"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#301E26"
+            android:gravity="end" android:text="查看更多"
+            android:drawableRight="@drawable/home_arrow_right"
+            android:drawablePadding="5dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <GridView android:id="@+id/item_home_hot_grid"
+        android:layout_height="1020dp"
+        android:layout_width="match_parent"
+        android:verticalSpacing="10dp"
+        android:numColumns="2"
+        android:horizontalSpacing="10dp"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

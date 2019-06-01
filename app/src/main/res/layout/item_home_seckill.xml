@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/item_home_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/home_arrow_left_flash"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#000"
+            android:text="今日闪购 距·结束"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/item_home_seckill_time"
+            android:padding="2dp"
+            android:background="@drawable/time_shape"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#fff"
+            android:text="00:00:00"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/item_home_seckill_more"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="查看更多"
+            android:gravity="end"
+            android:drawableRight="@drawable/home_arrow_right"
+            android:drawablePadding="5dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/item_home_layout"
+        android:id="@+id/item_home_seckill_recyclerview"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="270dp"
+        android:layout_width="match_parent"/>
+
+</android.support.constraint.ConstraintLayout>

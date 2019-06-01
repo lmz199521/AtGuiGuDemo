@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBox
+        android:id="@+id/item_goshoppingcart_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/AppTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/item_goshoppingcart_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ttlogo"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/item_goshoppingcart_radio"/>
+
+    <TextView
+        android:id="@+id/item_goshoppingcart_title"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toRightOf="@id/item_goshoppingcart_pic"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="dasdsadsadsad"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="@id/item_goshoppingcart_pic"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/item_goshoppingcart_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="150yuan "
+        android:textColor="@color/main_red"
+        app:layout_constraintLeft_toRightOf="@id/item_goshoppingcart_pic"
+        app:layout_constraintTop_toBottomOf="@id/item_goshoppingcart_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        />
+
+    <ImageView
+        android:id="@+id/item_goshoppingcart_subtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/goods_sub_btn"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toBottomOf="@id/item_goshoppingcart_price"
+        app:layout_constraintRight_toLeftOf="@id/item_goshoppingcart_number"
+        />
+
+    <TextView
+        android:id="@+id/item_goshoppingcart_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/item_goshoppingcart_price"
+        app:layout_constraintRight_toLeftOf="@id/item_goshoppingcart_addBtn"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="15dp"
+        android:textSize="16dp"
+        android:text="1"/>
+
+    <ImageView
+        android:id="@+id/item_goshoppingcart_addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/goods_add_btn"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toBottomOf="@id/item_goshoppingcart_price"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="10dp"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

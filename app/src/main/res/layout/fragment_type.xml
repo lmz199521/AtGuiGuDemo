@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".View.Type.TypeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/type_tablayout"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            app:tl_textBold="BOTH"
+            app:tl_textsize="18sp"
+            app:tl_textSelectColor="#FFF7F6"
+            app:tl_textUnselectColor="#E50003"
+            app:tl_indicator_corner_radius="@dimen/textSize"
+            android:layout_height="wrap_content"></com.flyco.tablayout.SegmentTabLayout>
+
+        <ImageView
+            android:id="@+id/type_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/home_search_icon"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#DEE0E5"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+<FrameLayout
+    android:id="@+id/type_framelayout"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"></FrameLayout>
+
+
+</LinearLayout>

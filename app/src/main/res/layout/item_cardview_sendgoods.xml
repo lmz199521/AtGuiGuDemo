@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="100dp"
+    android:layout_marginBottom="40dp"
+    android:layout_marginLeft="22dp"
+    android:layout_marginRight="22dp"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/item_sendgoods_cardview"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="20dp"
+        app:contentPadding="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="#fff"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/sendgoods_goodsnumber"
+                android:layout_margin="5dp"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="订单号：12315161651556"/>
+
+            <ImageView
+                android:id="@+id/sendgoods_goodpic"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/sendgoods_price"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:text="订单价格：150元"/>
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/sendgoods_look"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+           android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="查看物流"
+            android:background="@drawable/sendgood_btn"
+            android:layout_margin="5dp"
+        android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/sendgoods_remind"
+            android:gravity="center"
+            android:background="@drawable/sendgood_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="提醒发货"
+
+            android:layout_margin="5dp"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/sendgoods_sendback"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="立即退货"
+            android:gravity="center"
+            android:textColor="@color/main_red"
+            android:textStyle="bold"
+            android:background="@drawable/sendgood_btn"
+            android:layout_margin="5dp"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

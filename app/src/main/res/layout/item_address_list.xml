@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/item_address_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="姓名"
+        android:textSize="16sp"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        />
+    <TextView
+        android:id="@+id/item_address_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="15936319282"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintLeft_toRightOf="@id/item_address_name"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#6B6D72"
+    app:layout_constraintTop_toBottomOf="@id/item_address_phone"
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="dsssssssssssssssssssssssssss"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/item_address_name"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:id="@+id/item_address_home"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#6B6D72"
+        app:layout_constraintTop_toBottomOf="@id/item_address_home"
+        />
+
+    <RadioButton
+        android:id="@+id/item_address_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置为默认地址"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toBottomOf="@id/item_address_home"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改"
+        android:layout_margin="5dp"
+        android:id="@+id/item_address_update"
+        android:background="@drawable/item_address_btn"
+        app:layout_constraintRight_toLeftOf="@id/item_address_delete"
+        app:layout_constraintTop_toBottomOf="@id/item_address_radio"
+        />
+    <Button
+        android:id="@+id/item_address_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除"
+        android:background="@drawable/item_address_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toBottomOf="@id/item_address_radio"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

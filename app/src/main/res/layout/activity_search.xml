@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.search.SearchActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <AutoCompleteTextView
+        android:id="@+id/search_auto_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="请输入要搜索的内容"/>
+
+    <ImageView
+        android:id="@+id/search_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/home_search_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="@id/search_auto_text"
+        app:layout_constraintBottom_toBottomOf="@id/search_auto_text"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:id="@+id/search_old"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="历史搜索"
+        android:drawableLeft="@drawable/goods_heard_red"
+        app:layout_constraintTop_toBottomOf="@id/search_auto_text"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textColor="#080000"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/search_old"
+        android:background="@color/main_gray"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/search_old_recyclerview"
+        app:layout_constraintTop_toBottomOf="@id/search_old"
+        android:layout_marginTop="2dp"
+        ></android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/search_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="热门推荐"
+        android:drawableLeft="@drawable/goods_heard_red"
+        app:layout_constraintTop_toBottomOf="@id/search_old_recyclerview"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textColor="#080000"
+        />
+
+    <TextView
+        android:id="@+id/search_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="换一批"
+        app:layout_constraintTop_toTopOf="@id/search_hot"
+        app:layout_constraintBottom_toBottomOf="@id/search_hot"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="5dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/search_hot"
+        android:background="@color/main_gray"/>
+
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/search_hot_recyclerview"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          app:layout_constraintTop_toBottomOf="@id/search_hot"
+          android:layout_marginTop="2dp"></android.support.v7.widget.RecyclerView>
+
+
+    <TextView
+        android:id="@+id/search_ttt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="搜索的商品"
+        android:drawableLeft="@drawable/goods_heard_red"
+        app:layout_constraintTop_toBottomOf="@id/search_hot_recyclerview"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textColor="#080000"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/search_ttt"
+        android:background="@color/main_gray"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/search_ttt"
+        android:layout_marginTop="2dp"></android.support.v7.widget.RecyclerView>
+
+    </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

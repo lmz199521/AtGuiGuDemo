@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--退出activity  原有的activity 退出到最右侧-->
+    <translate android:fromXDelta="0%"
+         android:toXDelta="100%"
+        android:duration="200"/>
+
+</set>

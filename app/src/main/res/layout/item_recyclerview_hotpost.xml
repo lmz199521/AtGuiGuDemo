@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/hotpost_linear_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/main_margin"
+        android:layout_marginRight="@dimen/main_margin"
+        tools:ignore="MissingConstraints">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/hot_post_avatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/home_arrow_left_hot" />
+
+        <TextView
+            android:id="@+id/hot_post_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/textSize"
+            android:text="sadsadsad" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/hot_post_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize"
+                android:text="asdsadsa"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/hot_post_pic"
+        app:layout_constraintTop_toBottomOf="@id/hotpost_linear_top"
+        android:src="@drawable/a3"
+        android:layout_marginLeft="@dimen/main_margin"
+        android:layout_marginRight="@dimen/main_margin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@id/hotpost_linear_center"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/hotpost_linear_center"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/main_margin"
+        app:layout_constraintBottom_toTopOf="@id/hotpost_linear_bottom"
+        android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/hot_post_flexbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/hot_post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="dddddddddd"
+            android:textSize="@dimen/textSize"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/hotpost_linear_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/hot_post_line"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/main_margin"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/hot_post_like"
+            android:drawableLeft="@drawable/community_like_icon"
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:textSize="@dimen/textSize"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="dasdsad"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/community_mid_line"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:id="@+id/hot_post_mess"
+            android:drawableLeft="@drawable/community_comment_icon"
+            android:layout_width="0dp"
+            android:layout_weight="4.5"
+            android:textSize="@dimen/textSize"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="dasdsad"/>
+    </LinearLayout>
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/hot_post_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#D7D8C9"/>
+
+</android.support.constraint.ConstraintLayout>
